@@ -1,0 +1,225 @@
+/* ===== Reset et styles de base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-y: scroll; /* scroll toujours actif */
+    scrollbar-width: none; /* Firefox */
+    background: #0e0e14;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0px; /* Chrome, Edge, Safari */
+    background: transparent;
+}
+
+/* Cache la scrollbar mais garde le scroll */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;   /* le scroll fonctionne */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== Image de profil ===== */
+.photo-crop {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('image/tete.png');
+    background-size: cover;
+    background-position: center 30%;
+    border: 4px solid white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* ===== Titres ===== */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin: 25px 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bfbfbf;
+}
+
+/* ===== Grille de blocs ===== */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* ===== Blocs cliquables ===== */
+.block {
+    background: #1b1b2f;
+    padding: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+/* Hover effets */
+.block:hover {
+    transform: scale(1.05);
+    background: #302f4b;
+}
+
+/* ===== Variantes ===== */
+.contact {
+    background: #2d2d3f;
+}
+
+.social {
+    background: #2a2a38;
+}
+
+/* ===== Réseaux Sociaux en ligne ===== */
+.social-line {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* passe en vertical si écran trop petit */
+}
+
+/* ===== Style commun des blocs ===== */
+.social-block {
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* ===== Hover ===== */
+.social-block:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Blocs individuellement personnalisables ===== */
+
+/* Couleur Steam */
+#steam {
+    background: #0a2666; /* bleu très sombre */
+    border: 2px solid #ffffff;
+}
+
+/* Couleurs Deezer (remplace Spotify) */
+#deezer {
+    background: linear-gradient(90deg, #52097c, #66087e); /* noir/blanc/rouge/bleu du logo Deezer */
+    border: 2px solid #000;
+    color: #000; /* texte noir sur fond clair */
+}
+
+/* Couleur Discord (inchangée mais précisée) */
+#discord {
+    background: linear-gradient(90deg, #1545ac, #0000ff);
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+/* Couleur Instagram */
+#instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+
+#mail {
+    width: 70%;
+    background: #7289da;
+    border: 2px solid #ffffff;
+}
+
+#telephone {
+    width: 100%;
+    background: #5865f2;
+    border: 2px solid #ffffff;
+}
+
+.copy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* espace entre le lien et le bouton */
+}
+
+.copy-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.copy-btn:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
+/* Bouton copier */
+.copy-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* Animation clic */
+.copy-btn:active {
+    transform: scale(0.9);
+}
+
+/* Effet hover */
+.copy-btn:hover {
+    background: #666;
+}
